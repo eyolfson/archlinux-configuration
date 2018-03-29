@@ -1,0 +1,13 @@
+clang
+cmake
+git
+glslang
+graphviz
+python
+spirv-tools
+vulkan-extra-layers
+vulkan-headers
+vulkan-html-docs
+vulkan-intel
+vulkan-trace
+vulkan-validation-layers
