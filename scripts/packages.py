@@ -34,42 +34,44 @@ def add_packages_from_file(packages, path):
 def add_packages_from_package_group(packages, group):
     add_packages_from_file(packages, os.path.join(PACKAGE_GROUP_DIR, group))
 
-def check_packages():
-    pass
-
-def main():
+def check_packages(hostname):
     installed_packages = get_installed_packages()
     wanted_packages = set()
     add_packages_from_group(wanted_packages, 'base')
     add_packages_from_group(wanted_packages, 'base-devel')
-    add_packages_from_package_group(wanted_packages, 'android')
-    add_packages_from_package_group(wanted_packages, 'audio')
-    add_packages_from_package_group(wanted_packages, 'bluetooth')
-    add_packages_from_package_group(wanted_packages, 'development')
-    add_packages_from_package_group(wanted_packages, 'intel')
-    add_packages_from_package_group(wanted_packages, 'laptop')
-    add_packages_from_package_group(wanted_packages, 'latex')
-    add_packages_from_package_group(wanted_packages, 'shell')
-    add_packages_from_package_group(wanted_packages, 'wayland')
-    add_packages_from_package_group(wanted_packages, 'wifi')
-    add_packages_from_package_group(wanted_packages, 'x11')
-    add_packages_from_package_group(wanted_packages, 'x11-audio')
-    add_packages_from_package_group(wanted_packages, 'x11-intel')
+    path = os.path.join(BASE_DIR, 'host-specific', hostname, 'package-group')
+    with open(path, 'r') as f:
+        for line in f:
+            s = line.strip()
+            if s.startswith('#'):
+                continue
+            add_packages_from_package_group(wanted_packages, s)
     missing_packages = wanted_packages - installed_packages
     unwanted_packages = installed_packages - wanted_packages
     if len(missing_packages) > 0:
-        print('\033[1;33m{} missing package{}\033[0m'.format(
-            len(missing_packages), 's' if len(missing_packages) > 1 else ''))
-        subprocess.run(['sudo', 'pacman', '-S'] + list(missing_packages))
+        args = ['sudo', 'pacman', '-S'] + list(missing_packages)
+        print(' '.join(args))
+        subprocess.run(args)
     if len(unwanted_packages) > 0:
-        print('\033[1;33m{} unwanted package{}\033[0m'.format(
-            len(unwanted_packages), 's' if len(unwanted_packages) > 1 else ''))
-        subprocess.run(['sudo', 'pacman', '-Rs'] + list(unwanted_packages))
+        args = ['sudo', 'pacman', '-Rs'] + list(unwanted_packages)
+        print(' '.join(args))
+        subprocess.run(args)
+
+def get_hostname():
+    path = '/etc/hostname'
+    try:
+        contents = open(path, 'r').read()
+    except FileNotFoundError:
+        print('\033[31m{} not found\033[0m'.format(path))
+        exit(1)
+    if contents[-1] != '\n':
+        print('\033[31m{} missing newline\033[0m'.format(path))
+        exit(1)
+    return contents[:-1]
+
+def main():
+    hostname = get_hostname()
+    check_packages(hostname)
 
 if __name__ == '__main__':
     main()
-
-# os.uname().nodename
-# installed packages
-# configuration files
-# by use... bluetooth email
