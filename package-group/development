@@ -3,6 +3,8 @@ cmake
 git
 glslang
 graphviz
+llvm
+postgresql
 python
 spirv-tools
 vulkan-extra-layers
