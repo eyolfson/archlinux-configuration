@@ -1,0 +1,9 @@
+[user]
+	email = jon@eyl.io
+	name = Jon Eyolfson
+[push]
+	default = simple
+[color]
+	ui = true
+[alias]
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
