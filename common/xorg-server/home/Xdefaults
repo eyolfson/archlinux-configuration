@@ -1,0 +1,10 @@
+Xft.dpi: 210
+
+Emacs.font: Overpass Mono-6
+
+URxvt.scrollBar: False
+URxvt.font: xft:OverpassMono:size=6
+URxvt.background: black
+URxvt.foreground: white
+URxvt.color4: #6c71c4
+URxvt.color12: #6c71c4
