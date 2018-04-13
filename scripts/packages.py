@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-
 import os
 import subprocess
 
-SCRIPTS_DIR = os.path.dirname(os.path.realpath(__file__))
-BASE_DIR = os.path.dirname(SCRIPTS_DIR)
-PACKAGE_GROUP_DIR = os.path.join(BASE_DIR, 'package-group')
+import constants
+
+PACKAGE_GROUP_DIR = os.path.join(constants.BASE_DIR, 'package-group')
+HOST_SPECIFIC_DIR = os.path.join(constants.BASE_DIR, 'host-specific')
 
 def get_installed_packages():
     p = subprocess.run(['pacman', '-Qqe'],
@@ -39,7 +38,7 @@ def check_packages(hostname):
     wanted_packages = set()
     add_packages_from_group(wanted_packages, 'base')
     add_packages_from_group(wanted_packages, 'base-devel')
-    path = os.path.join(BASE_DIR, 'host-specific', hostname, 'package-group')
+    path = os.path.join(HOST_SPECIFIC_DIR, hostname, 'package-group')
     with open(path, 'r') as f:
         for line in f:
             s = line.strip()
@@ -56,22 +55,3 @@ def check_packages(hostname):
         args = ['sudo', 'pacman', '-Rs'] + list(unwanted_packages)
         print(' '.join(args))
         subprocess.run(args)
-
-def get_hostname():
-    path = '/etc/hostname'
-    try:
-        contents = open(path, 'r').read()
-    except FileNotFoundError:
-        print('\033[31m{} not found\033[0m'.format(path))
-        exit(1)
-    if contents[-1] != '\n':
-        print('\033[31m{} missing newline\033[0m'.format(path))
-        exit(1)
-    return contents[:-1]
-
-def main():
-    hostname = get_hostname()
-    check_packages(hostname)
-
-if __name__ == '__main__':
-    main()
