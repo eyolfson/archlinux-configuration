@@ -8,5 +8,6 @@ pkgfile
 smartmontools
 sshfs
 tmux
+wget
 zsh
 zsh-completions
