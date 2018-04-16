@@ -1,10 +1,9 @@
+import constants
+
 import os
 import subprocess
 
-import constants
-
 PACKAGE_GROUP_DIR = os.path.join(constants.BASE_DIR, 'package-group')
-HOST_SPECIFIC_DIR = os.path.join(constants.BASE_DIR, 'host-specific')
 
 def get_installed_packages():
     p = subprocess.run(['pacman', '-Qqe'],
@@ -38,7 +37,7 @@ def check_packages(hostname):
     wanted_packages = set()
     add_packages_from_group(wanted_packages, 'base')
     add_packages_from_group(wanted_packages, 'base-devel')
-    path = os.path.join(HOST_SPECIFIC_DIR, hostname, 'package-group')
+    path = os.path.join(constants.HOST_SPECIFIC_DIR, hostname, 'package-group')
     with open(path, 'r') as f:
         for line in f:
             s = line.strip()

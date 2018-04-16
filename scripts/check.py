@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from configs import check_configs
 from packages import check_packages
 
 def get_hostname():
@@ -16,6 +17,7 @@ def get_hostname():
 
 def main():
     hostname = get_hostname()
+    check_configs(hostname)
     check_packages(hostname)
 
 if __name__ == '__main__':
