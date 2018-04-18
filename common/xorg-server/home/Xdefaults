@@ -6,5 +6,7 @@ URxvt.scrollBar: False
 URxvt.font: xft:OverpassMono:size=6
 URxvt.background: black
 URxvt.foreground: white
+URxvt.color2: #859900
+URxvt.color10: #859900
 URxvt.color4: #6c71c4
 URxvt.color12: #6c71c4
