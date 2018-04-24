@@ -4,6 +4,7 @@ git
 glslang
 graphviz
 llvm
+perf
 postgresql
 python
 spirv-tools
