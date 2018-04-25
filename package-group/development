@@ -7,6 +7,7 @@ llvm
 perf
 postgresql
 python
+strace
 spirv-tools
 vulkan-extra-layers
 vulkan-headers
