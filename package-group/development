@@ -3,6 +3,7 @@ cmake
 git
 glslang
 graphviz
+jdk10-openjdk
 llvm
 perf
 postgresql
