@@ -4,6 +4,7 @@ git
 glslang
 graphviz
 jdk10-openjdk
+linux-headers
 llvm
 perf
 postgresql
