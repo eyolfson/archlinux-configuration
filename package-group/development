@@ -6,6 +6,7 @@ graphviz
 jdk10-openjdk
 linux-headers
 llvm
+lsof
 perf
 postgresql
 python
