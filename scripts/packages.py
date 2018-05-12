@@ -54,3 +54,4 @@ def check_packages(hostname):
         args = ['sudo', 'pacman', '-Rs'] + list(unwanted_packages)
         print(' '.join(args))
         subprocess.run(args)
+    subprocess.run("pacman -Qdtq | sudo pacman -Rs -", shell=True)
