@@ -1,0 +1,21 @@
+set realname="Jon Eyolfson"
+set use_from=yes
+set mbox_type=Maildir
+set folder=$HOME/email
+mailboxes "+jon@eyl.io/drafts" \
+          "+jon@eyl.io/inbox" \
+          "+jon@eyl.io/sent" \
+          "+jon@eyl.io/trash" \
+          "+jeyolfso@uwaterloo.ca/drafts" \
+          "+jeyolfso@uwaterloo.ca/inbox" \
+          "+jeyolfso@uwaterloo.ca/sent" \
+          "+jeyolfso@uwaterloo.ca/spam" \
+          "+jeyolfso@uwaterloo.ca/trash"
+set edit_headers=yes
+set send_charset="utf-8"
+set editor="vim"
+
+folder-hook +jon@eyl.io/* source ~/.mutt/jon@eyl.io
+folder-hook +jeyolfso@uwaterloo.ca/* source ~/.mutt/jeyolfso@uwaterloo.ca
+
+source ~/.mutt/jon@eyl.io

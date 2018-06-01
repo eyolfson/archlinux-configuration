@@ -1,0 +1,5 @@
+set from="jeyolfso@uwaterloo.ca"
+set spoolfile=+jeyolfso@uwaterloo.ca/inbox
+set record=+jeyolfso@uwaterloo.ca/sent
+set postponed=+jeyolfso@uwaterloo.ca/drafts
+set sendmail="msmtp -a jeyolfso@uwaterloo.ca"
