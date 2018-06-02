@@ -12,6 +12,7 @@ postgresql
 python
 strace
 spirv-tools
+valgrind
 vulkan-extra-layers
 vulkan-headers
 vulkan-html-docs
