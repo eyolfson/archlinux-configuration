@@ -1,3 +1,6 @@
+libvirt
+ovmf
+qemu
 vagrant
+virt-manager
 virtualbox
-virtualbox-ext-oracle
