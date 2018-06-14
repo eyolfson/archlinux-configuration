@@ -1,8 +1,10 @@
+bind-tools
 clang
 cmake
 git
 glslang
 graphviz
+imagemagick
 jdk10-openjdk
 linux-headers
 llvm
@@ -10,6 +12,7 @@ lsof
 perf
 postgresql
 python
+python-django
 strace
 spirv-tools
 valgrind
