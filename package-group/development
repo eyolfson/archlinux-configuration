@@ -9,6 +9,7 @@ jdk10-openjdk
 linux-headers
 llvm
 lsof
+meson
 perf
 postgresql
 python
