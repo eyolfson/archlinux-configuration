@@ -13,7 +13,6 @@ meson
 perf
 postgresql
 python
-python-django
 strace
 spirv-tools
 valgrind

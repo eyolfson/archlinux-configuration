@@ -32,6 +32,13 @@ def add_packages_from_file(packages, path):
 def add_packages_from_package_group(packages, group):
     add_packages_from_file(packages, os.path.join(PACKAGE_GROUP_DIR, group))
 
+def add_unneeded_packages(packages):
+    p = subprocess.run(['pacman', '-Qdtq'],
+                       stdout=subprocess.PIPE,
+                       universal_newlines=True)
+    for line in p.stdout.splitlines():
+        packages.add(line)
+
 def check_packages(hostname):
     installed_packages = get_installed_packages()
     wanted_packages = set()
@@ -50,8 +57,8 @@ def check_packages(hostname):
         args = ['sudo', 'pacman', '-S'] + list(missing_packages)
         print(' '.join(args))
         subprocess.run(args)
+    add_unneeded_packages(unwanted_packages)
     if len(unwanted_packages) > 0:
         args = ['sudo', 'pacman', '-Rs'] + list(unwanted_packages)
         print(' '.join(args))
         subprocess.run(args)
-    subprocess.run("pacman -Qdtq | sudo pacman -Rs -", shell=True)
