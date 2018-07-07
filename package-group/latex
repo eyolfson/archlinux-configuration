@@ -1,4 +1,5 @@
 biber
+pdf2svg
 texlive-bibtexextra
 texlive-core
 texlive-fontsextra
