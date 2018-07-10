@@ -1,3 +1,5 @@
+arm-none-eabi-gcc
+arm-none-eabi-newlib
 bind-tools
 clang
 cmake
