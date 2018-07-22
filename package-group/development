@@ -4,6 +4,7 @@ asp
 bind-tools
 clang
 cmake
+gdb
 git
 glslang
 graphviz
