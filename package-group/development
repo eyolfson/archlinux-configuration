@@ -2,6 +2,7 @@ arm-none-eabi-gcc
 arm-none-eabi-newlib
 asp
 bind-tools
+blender
 clang
 cmake
 gdb
