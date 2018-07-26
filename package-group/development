@@ -1,5 +1,6 @@
 arm-none-eabi-gcc
 arm-none-eabi-newlib
+assimp
 asp
 bind-tools
 blender
@@ -7,6 +8,7 @@ clang
 cmake
 gdb
 git
+gli
 glslang
 graphviz
 imagemagick
