@@ -12,6 +12,7 @@ gli
 glslang
 graphviz
 imagemagick
+iotop
 jdk10-openjdk
 linux-headers
 llvm
