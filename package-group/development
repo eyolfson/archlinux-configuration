@@ -5,6 +5,7 @@ asp
 bind-tools
 blender
 clang
+cloc
 cmake
 gdb
 git
