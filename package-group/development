@@ -11,9 +11,11 @@ gdb
 git
 gli
 glslang
+gradle
 graphviz
 imagemagick
 iotop
+jdk8-openjdk
 jdk10-openjdk
 linux-headers
 llvm
