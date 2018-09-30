@@ -13,6 +13,7 @@ gli
 glslang
 gradle
 graphviz
+hg-fast-export-git
 imagemagick
 iotop
 jdk8-openjdk
