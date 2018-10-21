@@ -11,6 +11,7 @@ gdb
 git
 gli
 glslang
+gnu-netcat
 gradle
 graphviz
 hg-fast-export-git
@@ -23,12 +24,14 @@ llvm
 lsof
 mercurial
 meson
+nmap
 perf
 postgresql
 python
 strace
 spirv-tools
 valgrind
+vim
 vulkan-extra-layers
 vulkan-headers
 vulkan-html-docs
