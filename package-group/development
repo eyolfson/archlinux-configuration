@@ -35,6 +35,5 @@ vim
 vulkan-extra-layers
 vulkan-headers
 vulkan-html-docs
-vulkan-intel
 vulkan-trace
 vulkan-validation-layers

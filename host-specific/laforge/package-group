@@ -1,5 +1,8 @@
+amdgpu
+audio
 base
 development
 latex
 shell
 x11
+x11-audio
