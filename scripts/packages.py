@@ -7,6 +7,7 @@ PACKAGE_GROUP_DIR = os.path.join(constants.BASE_DIR, 'package-group')
 
 def get_installed_packages():
     p = subprocess.run(['pacman', '-Qqe'],
+                       check=True,
                        stdout=subprocess.PIPE,
                        universal_newlines=True)
     installed_packages = set()
@@ -16,6 +17,7 @@ def get_installed_packages():
 
 def add_packages_from_group(packages, group):
     p = subprocess.run(['pacman', '-Sg', group],
+                       check=True,
                        stdout=subprocess.PIPE,
                        universal_newlines=True)
     for line in p.stdout.splitlines():
@@ -56,9 +58,9 @@ def check_packages(hostname):
     if len(missing_packages) > 0:
         args = ['sudo', 'pacman', '-S'] + list(missing_packages)
         print(' '.join(args))
-        subprocess.run(args)
+        subprocess.run(args, check=True)
     add_unneeded_packages(unwanted_packages)
     if len(unwanted_packages) > 0:
         args = ['sudo', 'pacman', '-Rs'] + list(unwanted_packages)
         print(' '.join(args))
-        subprocess.run(args)
+        subprocess.run(args, check=True)

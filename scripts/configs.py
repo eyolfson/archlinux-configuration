@@ -2,6 +2,7 @@ import constants
 
 import os
 import pathlib
+import subprocess
 
 COMMON_DIR = os.path.join(constants.BASE_DIR, 'common')
 
@@ -19,16 +20,26 @@ def get_filesystem_abspath(relpath):
             abspath = os.path.join(abspath, '.{}'.format(part))
         else:
             abspath = os.path.join(abspath, part)
-    return abspath
+    return (abspath, is_home)
 
 def check_file(package_dir, path):
     relpath = os.path.relpath(path, start=package_dir)
-    abspath = get_filesystem_abspath(relpath)
+    abspath, is_home = get_filesystem_abspath(relpath)
+    if not os.path.exists(abspath):
+        args = ['install', '-D', '-m', '644', '/dev/null', abspath]
+        if is_home:
+            subprocess.run(args, check=True)
+        else:
+            subprocess.run(['sudo'] + args, check=True)
     with open(path, 'r') as repo, open(abspath, 'r') as current:
         if repo.read() != current.read():
             print(abspath)
 
 def check_configs_for_package(package_dir):
+    package_name = os.path.basename(package_dir)
+    p = subprocess.run(['pacman', '-Qi', package_name], capture_output=True)
+    if p.returncode != 0:
+        return
     for root, dirs, files in os.walk(package_dir):
         for f in files:
             check_file(package_dir, os.path.join(root, f))

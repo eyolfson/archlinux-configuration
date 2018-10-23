@@ -17,8 +17,8 @@ def get_hostname():
 
 def main():
     hostname = get_hostname()
-    check_configs(hostname)
     check_packages(hostname)
+    check_configs(hostname)
 
 if __name__ == '__main__':
     main()
