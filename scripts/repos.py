@@ -40,6 +40,7 @@ PRIVATE_REPOSITORIES = [
 ]
 
 UCLA_REPOSITORIES = [
+    'java-scripts',
     'jdk8',
     'jdk8-corba',
     'jdk8-hotspot',
