@@ -36,6 +36,19 @@ PRIVATE_REPOSITORIES = [
     'eudyptula-challenge',
     'home-password-store',
     'notepad',
+    'postdoc',
+]
+
+UCLA_REPOSITORIES = [
+    'jdk8',
+    'jdk8-corba',
+    'jdk8-hotspot',
+    'jdk8-jaxp',
+    'jdk8-jaxws',
+    'jdk8-jdk',
+    'jdk8-langtools',
+    'jdk8-nashorn',
+    'mlopt',
 ]
 
 UWATERLOO_REPOSITORIES = [
@@ -114,6 +127,16 @@ def check_repos():
         clone(git_directory, origin_uri)
         check_remote(git_directory, "origin", origin_uri)
         check_remote(git_directory, "github", github_uri)
+
+    print("\033[1;34mUCLA Repositories\033[m")
+    for repo_name in UCLA_REPOSITORIES:
+        print("\033[1;36mRepository '{}'\033[m".format(repo_name))
+        git_directory = os.path.join(SRC_DIRECTORY, "ucla", repo_name)
+        origin_uri = ORIGIN_URI_TEMPLATE.format(repo_name)
+        bitbucket_uri = BITBUCKET_URI_TEMPLATE.format(repo_name)
+        clone(git_directory, origin_uri)
+        check_remote(git_directory, "origin", origin_uri)
+        check_remote(git_directory, "bitbucket", bitbucket_uri)
 
     print("\033[1;34mUWaterloo Repositories\033[m")
     for repo_name in UWATERLOO_REPOSITORIES:
