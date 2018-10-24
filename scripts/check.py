@@ -2,6 +2,7 @@
 
 from configs import check_configs
 from packages import check_packages
+from repos import check_repos
 
 def get_hostname():
     path = '/etc/hostname'
@@ -19,6 +20,7 @@ def main():
     hostname = get_hostname()
     check_packages(hostname)
     check_configs(hostname)
+    check_repos()
 
 if __name__ == '__main__':
     main()
