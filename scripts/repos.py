@@ -59,6 +59,7 @@ UWATERLOO_REPOSITORIES = [
     'django-cpp-doc',
     'immutability-experiments',
     'llvm-immutability-analysis',
+    'phd-research',
     'phd-thesis',
 ]
 
