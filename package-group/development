@@ -4,9 +4,12 @@ assimp
 asp
 bind-tools
 blender
+ccache
 clang
 cloc
 cmake
+cpio
+dmidecode
 gdb
 git
 gli
@@ -38,3 +41,4 @@ vulkan-headers
 vulkan-html-docs
 vulkan-trace
 vulkan-validation-layers
+zip
