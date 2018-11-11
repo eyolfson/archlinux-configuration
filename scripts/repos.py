@@ -33,6 +33,7 @@ PUBLIC_REPOSITORIES = [
 ]
 
 PRIVATE_REPOSITORIES = [
+    'coding-interview',
     'eudyptula-challenge',
     'home-password-store',
     'notepad',
