@@ -36,6 +36,7 @@ PRIVATE_REPOSITORIES = [
     'coding-interview',
     'eudyptula-challenge',
     'home-password-store',
+    'inside-the-web',
     'notepad',
     'postdoc',
 ]
