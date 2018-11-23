@@ -116,7 +116,7 @@ def check_remote(git_directory, name, uri):
 def check_repos():
     print("\033[1;34mPrivate Repositories\033[m")
     for repo_name in PRIVATE_REPOSITORIES:
-        print("\033[1;36mRepository '{}'\033[m".format(repo_name))
+        print("  \033[36mRepository '{}'\033[m".format(repo_name))
         git_directory = os.path.join(SRC_DIRECTORY, "private", repo_name)
         origin_uri = ORIGIN_URI_TEMPLATE.format(repo_name)
         clone(git_directory, origin_uri)
@@ -124,7 +124,7 @@ def check_repos():
 
     print("\033[1;34mPublic Repositories\033[m")
     for repo_name in PUBLIC_REPOSITORIES:
-        print("\033[1;36mRepository '{}'\033[m".format(repo_name))
+        print("  \033[36mRepository '{}'\033[m".format(repo_name))
         git_directory = os.path.join(SRC_DIRECTORY, "public", repo_name)
         origin_uri = ORIGIN_URI_TEMPLATE.format(repo_name)
         github_uri = GITHUB_URI_TEMPLATE.format(repo_name)
@@ -134,7 +134,7 @@ def check_repos():
 
     print("\033[1;34mUCLA Repositories\033[m")
     for repo_name in UCLA_REPOSITORIES:
-        print("\033[1;36mRepository '{}'\033[m".format(repo_name))
+        print("  \033[36mRepository '{}'\033[m".format(repo_name))
         git_directory = os.path.join(SRC_DIRECTORY, "ucla", repo_name)
         origin_uri = ORIGIN_URI_TEMPLATE.format(repo_name)
         bitbucket_uri = BITBUCKET_URI_TEMPLATE.format(repo_name)
@@ -144,7 +144,7 @@ def check_repos():
 
     print("\033[1;34mUWaterloo Repositories\033[m")
     for repo_name in UWATERLOO_REPOSITORIES:
-        print("\033[1;36mRepository '{}'\033[m".format(repo_name))
+        print("  \033[36mRepository '{}'\033[m".format(repo_name))
         git_directory = os.path.join(SRC_DIRECTORY, "uwaterloo", repo_name)
         origin_uri = ORIGIN_URI_TEMPLATE.format(repo_name)
         ecgit_uri = ECGIT_URI_TEMPLATE.format(repo_name)
@@ -155,7 +155,7 @@ def check_repos():
     print("\033[1;34mExternal Repositories\033[m")
     for entry in EXTERNAL_REPOSITORIES:
         repo_name, upstream_uri, external_remotes = entry
-        print("\033[1;36mRepository '{}'\033[m".format(repo_name))
+        print("  \033[36mRepository '{}'\033[m".format(repo_name))
         git_directory = os.path.join(SRC_DIRECTORY, "external", repo_name)
         origin_uri = ORIGIN_URI_TEMPLATE.format(repo_name)
         clone(git_directory, origin_uri)
