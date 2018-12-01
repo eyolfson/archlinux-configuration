@@ -3,7 +3,9 @@ amdgpu
 audio
 base
 development
+development-java
 latex
 shell
+vm
 x11
 x11-audio
