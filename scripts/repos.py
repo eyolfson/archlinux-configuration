@@ -85,6 +85,9 @@ EXTERNAL_REPOSITORIES = [
     ('llvm',
      'http://llvm.org/git/llvm.git',
      []),
+    ('soot',
+     'https://github.com/Sable/soot.git',
+     []),
 ]
 
 def clone(git_directory, uri):
