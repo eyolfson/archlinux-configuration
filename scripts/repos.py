@@ -52,6 +52,7 @@ UCLA_REPOSITORIES = [
     'jdk8-langtools',
     'jdk8-nashorn',
     'mlopt',
+    'onr-integrate',
 ]
 
 UWATERLOO_REPOSITORIES = [
