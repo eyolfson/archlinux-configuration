@@ -13,6 +13,7 @@ ECGIT_URI_TEMPLATE = 'git@ecgit.uwaterloo.ca:jeyolfso/{}'
 BITBUCKET_URI_TEMPLATE = 'git@bitbucket.org:eyolfson/{}'
 
 PUBLIC_REPOSITORIES = [
+    'adventofcode-2017',
     'archlinux-configuration',
     'aur',
     'configuration',
