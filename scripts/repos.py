@@ -14,6 +14,7 @@ BITBUCKET_URI_TEMPLATE = 'git@bitbucket.org:eyolfson/{}'
 
 PUBLIC_REPOSITORIES = [
     'adventofcode-2017',
+    'adventofcode-2018',
     'archlinux-configuration',
     'aur',
     'configuration',
