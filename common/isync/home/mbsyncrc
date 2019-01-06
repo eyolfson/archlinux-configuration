@@ -1,0 +1,21 @@
+IMAPAccount jon@eyl.io
+Host mail.eyl.io
+User jon@eyl.io
+PassCmd "pass show mail.eyl.io/jon@eyl.io"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore jon@eyl.io-remote
+Account jon@eyl.io
+
+MaildirStore jon@eyl.io-local
+Subfolders Verbatim
+Path ~/email/jon@eyl.io/
+Inbox ~/email/jon@eyl.io/INBOX
+
+Channel jon@eyl.io
+Master :jon@eyl.io-remote:
+Slave :jon@eyl.io-local:
+Patterns *
+Create Both
+SyncState *
