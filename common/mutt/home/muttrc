@@ -2,10 +2,10 @@ set realname="Jon Eyolfson"
 set use_from=yes
 set mbox_type=Maildir
 set folder=$HOME/email
-mailboxes "+jon@eyl.io/drafts" \
-          "+jon@eyl.io/inbox" \
-          "+jon@eyl.io/sent" \
-          "+jon@eyl.io/trash" \
+mailboxes "+jon@eyl.io/Drafts" \
+          "+jon@eyl.io/INBOX" \
+          "+jon@eyl.io/Sent" \
+          "+jon@eyl.io/Trash" \
           "+jeyolfso@uwaterloo.ca/drafts" \
           "+jeyolfso@uwaterloo.ca/inbox" \
           "+jeyolfso@uwaterloo.ca/sent" \
