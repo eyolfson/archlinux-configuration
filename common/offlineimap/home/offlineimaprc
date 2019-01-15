@@ -1,29 +1,7 @@
 [general]
-accounts = jon@eyl.io, jeyolfso@uwaterloo.ca
-maxsyncaccounts = 2
+accounts = jeyolfso@uwaterloo.ca
+maxsyncaccounts = 1
 pythonfile = ~/.offlineimap.py
-
-[Account jon@eyl.io]
-localrepository = jon@eyl.io-local
-remoterepository = jon@eyl.io-remote
-autorefresh = 5
-quick = 10
-
-[Repository jon@eyl.io-local]
-type = Maildir
-localfolders = ~/email/jon@eyl.io
-nametrans = nametrans_eyl_local
-
-[Repository jon@eyl.io-remote]
-type = IMAP
-remotehost = eyl.io
-remoteuser = jon
-remotepasseval = get_password("eyl")
-nametrans = nametrans_eyl_remote
-keepalive = 60
-holdconnectionopen = yes
-ssl = yes
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 [Account jeyolfso@uwaterloo.ca]
 localrepository = jeyolfso@uwaterloo.ca-local
