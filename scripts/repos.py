@@ -55,6 +55,7 @@ UCLA_REPOSITORIES = [
     'jdk8-nashorn',
     'mlopt',
     'onr-integrate',
+    'project-totus',
 ]
 
 UWATERLOO_REPOSITORIES = [
