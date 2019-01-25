@@ -3,6 +3,7 @@ arm-none-eabi-newlib
 assimp
 asp
 bc
+bear
 bind-tools
 blender
 ccache
