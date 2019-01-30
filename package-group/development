@@ -29,7 +29,6 @@ meson
 nmap
 perf
 postgresql
-postgresql-old-upgrade
 python
 rsync
 strace
