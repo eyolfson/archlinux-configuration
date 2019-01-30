@@ -1,2 +1,4 @@
 gradle
 maven
+jdk8-openjdk
+jdk10-openjdk

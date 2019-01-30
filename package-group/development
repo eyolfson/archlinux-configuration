@@ -21,8 +21,6 @@ graphviz
 hg-fast-export-git
 imagemagick
 iotop
-jdk8-openjdk
-jdk10-openjdk
 linux-headers
 llvm
 lsof
