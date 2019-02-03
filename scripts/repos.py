@@ -29,6 +29,7 @@ PUBLIC_REPOSITORIES = [
     'hello-vulkan',
     'llvm-static-analysis-examples',
     'matasano-challenge',
+    'project-clades',
     'site-eyl',
     'site-eyl-blog',
     'the-big-book-of-computing',
