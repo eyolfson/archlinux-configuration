@@ -20,6 +20,7 @@ PUBLIC_REPOSITORIES = [
     'configuration',
     'configuration-check',
     'const-checker',
+    'const-checker-artifact',
     'django-ssh',
     'eyl-desktop',
     'eyl-irc',
