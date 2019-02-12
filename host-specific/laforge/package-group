@@ -2,6 +2,7 @@ amd-cpu
 amdgpu
 audio
 base
+bluetooth
 development
 development-java
 latex
