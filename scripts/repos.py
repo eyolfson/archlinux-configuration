@@ -63,7 +63,8 @@ UCLA_REPOSITORIES = [
 
 UWATERLOO_REPOSITORIES = [
     'research-2016-ecoop-paper',
-    '2017-empirical-static-const',  
+    '2017-empirical-static-const',
+    '2018-uci-talk',
     'clang-immutability-check',
     'django-cpp-doc',
     'immutability-experiments',
