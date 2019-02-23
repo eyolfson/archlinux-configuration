@@ -47,6 +47,7 @@ PRIVATE_REPOSITORIES = [
 ]
 
 UCLA_REPOSITORIES = [
+    'hibench',
     'java-scripts',
     'jdk8',
     'jdk8-corba',
