@@ -1,10 +1,10 @@
-import constants
+from .constants import BASE_DIR, HOST_SPECIFIC_DIR
 
 import os
 import pathlib
 import subprocess
 
-COMMON_DIR = os.path.join(constants.BASE_DIR, 'common')
+COMMON_DIR = os.path.join(BASE_DIR, 'common')
 
 def get_filesystem_abspath(relpath):
     p = pathlib.PurePath(relpath)
@@ -47,7 +47,7 @@ def check_configs_for_package(package_dir):
 def check_configs(hostname):
     for name in os.listdir(COMMON_DIR):
         check_configs_for_package(os.path.join(COMMON_DIR, name))
-    host_dir = os.path.join(constants.HOST_SPECIFIC_DIR, hostname)
+    host_dir = os.path.join(HOST_SPECIFIC_DIR, hostname)
     for name in os.listdir(host_dir):
         if name == 'package-group':
             continue

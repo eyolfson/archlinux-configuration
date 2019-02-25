@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from configs import check_configs
-from packages import check_packages
-from repos import check_repos
+from .configs import check_configs
+from .packages import check_packages
+from .repos import check_repos
 
 def get_hostname():
     path = '/etc/hostname'
@@ -16,7 +16,7 @@ def get_hostname():
         exit(1)
     return contents[:-1]
 
-def main():
+def main(args):
     hostname = get_hostname()
     check_packages(hostname)
     check_configs(hostname)
