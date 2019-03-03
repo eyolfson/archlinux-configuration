@@ -22,6 +22,7 @@ PUBLIC_REPOSITORIES = [
     'const-checker',
     'const-checker-artifact',
     'const-checker-experiments',
+    'django-cpp-doc',
     'django-ssh',
     'eyl-desktop',
     'eyl-irc',
