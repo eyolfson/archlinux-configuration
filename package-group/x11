@@ -3,6 +3,7 @@ chromium
 emacs
 emacs-color-theme-solarized
 emacs-evil
+emacs-helm
 evince
 feh
 firefox
