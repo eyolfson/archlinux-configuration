@@ -22,6 +22,7 @@ rxvt-unicode
 scrot
 ttf-croscore
 ttf-dejavu
+ttf-inconsolata
 xorg-server
 xorg-xdpyinfo
 xorg-xinit
