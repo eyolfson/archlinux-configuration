@@ -59,6 +59,7 @@ UCLA_REPOSITORIES = [
     'jdk8-jdk',
     'jdk8-langtools',
     'jdk8-nashorn',
+    'jdk11',
     'mlopt',
     'onr-integrate',
     'project-totus',
