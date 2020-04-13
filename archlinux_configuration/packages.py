@@ -44,7 +44,6 @@ def add_unneeded_packages(packages):
 def check_packages(hostname):
     installed_packages = get_installed_packages()
     wanted_packages = set()
-    add_packages_from_group(wanted_packages, 'base')
     add_packages_from_group(wanted_packages, 'base-devel')
     path = os.path.join(HOST_SPECIFIC_DIR, hostname, 'package-group')
     with open(path, 'r') as f:
