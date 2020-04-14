@@ -1,5 +1,4 @@
 crda
 dialog
 iw
-wpa_actiond
 wpa_supplicant
