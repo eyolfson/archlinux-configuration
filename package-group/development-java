@@ -2,3 +2,4 @@ gradle
 maven
 jdk8-openjdk
 jdk11-openjdk
+postgresql-jdbc

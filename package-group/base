@@ -1,4 +1,16 @@
+base
+dhcp
+dhcpcd
 dosfstools
+e2fsprogs
 gptfdisk
 hwloc
+linux
+linux-firmware
+man-db
+man-pages
+nano
+netcf
+netctl
 ntfs-3g
+xfsprogs
