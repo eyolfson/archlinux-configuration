@@ -1,6 +1,6 @@
 dxvk-bin
 lib32-gnutls
 wine-staging
-wine_gecko
+wine-gecko
 wine-mono
 winetricks

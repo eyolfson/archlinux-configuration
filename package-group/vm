@@ -1,5 +1,5 @@
 libvirt
-ovmf
+edk2-ovmf
 qemu
 vagrant
 virt-manager
