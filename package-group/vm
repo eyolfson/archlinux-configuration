@@ -1,5 +1,6 @@
-libvirt
+docker
 edk2-ovmf
+libvirt
 qemu
 vagrant
 virt-manager

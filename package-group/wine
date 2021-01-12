@@ -1,5 +1,7 @@
 dxvk-bin
 lib32-gnutls
+lib32-vkd3d
+vkd3d
 wine-staging
 wine-gecko
 wine-mono
