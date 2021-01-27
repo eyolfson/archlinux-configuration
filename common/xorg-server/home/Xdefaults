@@ -10,3 +10,5 @@ URxvt.color2: #859900
 URxvt.color10: #859900
 URxvt.color4: #6c71c4
 URxvt.color12: #6c71c4
+URxvt.perl-ext:
+URxvt.perl-ext-common:
