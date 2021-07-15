@@ -5,15 +5,22 @@ import subprocess
 
 PACKAGE_GROUP_DIR = os.path.join(BASE_DIR, 'package-group')
 
-def get_installed_packages():
-    p = subprocess.run(['pacman', '-Qqe'],
+def get_packages_pacman(operation):
+    p = subprocess.run(['pacman'] + operation,
                        check=True,
                        stdout=subprocess.PIPE,
                        universal_newlines=True)
-    installed_packages = set()
+    packages = set()
     for line in p.stdout.splitlines():
-        installed_packages.add(line)
-    return installed_packages
+        packages.add(line)
+    return packages
+
+def get_installed_packages():
+    return get_packages_pacman(['-Qqe'])
+
+def get_installed_packages_from_group(packages, group):
+    for package in get_packages_pacman(['-Qqg', group]):
+        packages.add(package)
 
 def add_packages_from_group(packages, group):
     p = subprocess.run(['pacman', '-Sg', group],
@@ -43,6 +50,7 @@ def add_unneeded_packages(packages):
 
 def check_packages(hostname):
     installed_packages = get_installed_packages()
+    get_installed_packages_from_group(installed_packages, 'base-devel')
     wanted_packages = set()
     add_packages_from_group(wanted_packages, 'base-devel')
     path = os.path.join(HOST_SPECIFIC_DIR, hostname, 'package-group')
